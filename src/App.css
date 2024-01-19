@@ -1,37 +1,3 @@
-body {
-  background-color: #221f1f;
-  color: white;
-}
-
-.sidebar {
-  width: fit-content;
-  position: fixed;
-}
-a {
-  color: gray;
-  text-decoration: none;
-  font-size: 1rem;
-}
-
-p {
-  margin: 0;
-}
-
-.slick-next,
-.slick-prev {
-  font-size: large !important;
-  z-index: 3 !important;
-}
-
-.slick-prev {
-  margin-left: 2rem;
-}
-
-.slick-next {
-  margin-right: 4.5rem;
-}
-/*FINE CSS DELL'APP CUSTOM MIO*/
-
 .App {
   text-align: center;
 }

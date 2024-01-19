@@ -13,18 +13,18 @@ const Homepage = ({ artistName }) => {
   return (
     <Container fluid>
       <Row>
-        <Col sm={12}>
+        <Col sm={10}>
           <h2>Kpop</h2>
         </Col>
-        <Col>
+        <Col sm={10}>
           <AlbumsGallery artistName="twice" />
         </Col>
       </Row>
       <Row>
-        <Col sm={12}>
+        <Col sm={10}>
           <h2>JMusic</h2>
         </Col>
-        <Col>
+        <Col sm={10}>
           <AlbumsGallery artistName="chanmina" />
         </Col>
       </Row>

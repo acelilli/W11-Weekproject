@@ -1,0 +1,39 @@
+body {
+  background-color: #221f1f;
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar {
+  width: fit-content;
+  position: fixed;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+a {
+  color: gray;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+p {
+  margin: 0;
+}
+
+.slick-next,
+.slick-prev {
+  font-size: large !important;
+  z-index: 3 !important;
+}
+
+.slick-prev {
+  margin-left: 2rem;
+}
+
+.slick-next {
+  margin-right: 4.5rem;
+}

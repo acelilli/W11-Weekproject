@@ -26,7 +26,7 @@ const SpotifyNav = () => {
   return (
     <>
       <Col className="sidebar d-flex flex-column h-100">
-        <CDBSidebar textColor="#fff" backgroundColor="#000" className="text-center">
+        <CDBSidebar style={{ backgroundColor: "#000", color: "#fff" }} className="text-center">
           <CDBSidebarHeader>
             <a href="/" className="text-decoration-none" style={{ color: "inherit" }}>
               <img src={Logo} alt="logo Netflix" style={{ height: "6vmin" }} />
