@@ -1,15 +1,19 @@
 // songsReducer.js
-const initialState = {
+import { SET_SONGS } from "../actions";
+
+const initialSongState = {
   songs: [],
 };
 
-const songsReducer = (state = initialState, action) => {
+const songReducer = (state = initialSongState, action) => {
   switch (action.type) {
-    case "SET_SONGS":
-      return { ...state, songs: action.payload };
+    case SET_SONGS:
+      return {
+        ...state,
+        songs: action.payload,
+      };
     default:
       return state;
   }
 };
-
-export default songsReducer;
+export default songReducer;

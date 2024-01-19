@@ -5,12 +5,11 @@
 // import "slick-carousel/slick/slick.css";
 // import "slick-carousel/slick/slick-theme.css";
 import React from "react";
-import { Container, Row, Col, Dropdown, DropdownButton } from "react-bootstrap";
-import { Grid, List } from "react-bootstrap-icons";
+import { Container, Row, Col } from "react-bootstrap";
 import AlbumsGallery from "./AlbumsGallery";
 //single album card
 
-const Homepage = () => {
+const Homepage = ({ artistName }) => {
   return (
     <Container fluid>
       <Row>
@@ -18,7 +17,7 @@ const Homepage = () => {
           <h2>Kpop</h2>
         </Col>
         <Col>
-          <AlbumsGallery searchQuery="twice, blackpink, ive, lesserafim, g-idle" />
+          <AlbumsGallery artistName="twice" />
         </Col>
       </Row>
       <Row>
@@ -26,7 +25,7 @@ const Homepage = () => {
           <h2>JMusic</h2>
         </Col>
         <Col>
-          <AlbumsGallery searchQuery="chanmina, bandmaid, official hige dandism, fuji kaze, kenshi yonezu" />
+          <AlbumsGallery artistName="chanmina" />
         </Col>
       </Row>
     </Container>
