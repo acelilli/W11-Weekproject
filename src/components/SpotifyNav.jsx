@@ -6,24 +6,20 @@ import Logo from "../logo.png";
 import { BookFill, HouseDoorFill } from "react-bootstrap-icons";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
-import { useDispatch, useSelector } from "react-redux";
-import searchSongs, { setSearchResults } from "../redux/actions";
+import { useState } from "react";
+import { useDispatch } from "react-redux";
+import { setSearchResults, searchSongs } from "../redux/actions";
 
 //Trovata questa sidebar: npm install --save cdbreact
 // e customizzata
 const SpotifyNav = () => {
-  // Prendo il valore di searchValue dallo stato Redux
-  //   const searchValue = useSelector((state) => state.search.searchValue);
-  // Per le azioni redux == DISPATCH
+  const [query, setQuery] = useState("");
   const dispatch = useDispatch();
 
-  // Funzione gestore della ricerca
-  const handleSearch = (e) => {
+  function handleSubmit(e) {
     e.preventDefault();
-    const inputValue = e.target.elements.searchField.value;
-    // Dispaccia l'azione di ricerca con il valore inserito
-    dispatch(setSearchResults(inputValue));
-  };
+    dispatch(setSearchResults(query));
+  }
 
   // return
   return (
@@ -55,17 +51,18 @@ const SpotifyNav = () => {
             </Link>
           </CDBSidebarMenuItem>
           <CDBSidebarMenuItem>
-            <Form className="d-flex" onSubmit={handleSearch}>
+            <Form onSubmit={handleSubmit} className="input-group mt-3">
               <Form.Control
-                size="sm"
-                type="search"
+                type="text"
+                id="searchField"
                 placeholder="Search"
-                className="me-0 rounded-start rounded-0 mt-2"
                 aria-label="Search"
-                // value={useSelector((state) => state.search.searchValue)}
-                onChange={(e) => dispatch(setSearchResults(e.target.value))} // Dispatch diretto di l'azione
+                aria-describedby="basic-addon2"
+                value={query}
+                onChange={(e) => setQuery(e.target.value)}
               />
-              <Button size="sm" className="rounded-end rounded-0 mt-2" variant="outline-secondary" type="submit">
+
+              <Button variant="outline-secondary" className="h-100" type="submit">
                 GO
               </Button>
             </Form>

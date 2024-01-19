@@ -7,7 +7,7 @@
 import React from "react";
 import { Container, Row, Col, Dropdown, DropdownButton } from "react-bootstrap";
 import { Grid, List } from "react-bootstrap-icons";
-// import AlbumGallery from ''
+import AlbumsGallery from "./AlbumsGallery";
 //single album card
 
 const Homepage = () => {

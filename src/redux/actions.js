@@ -44,15 +44,13 @@ export const searchSongs = (searchQuery) => {
       });
 
       if (response.ok) {
-        const result = await response.json();
-        const { data } = result;
+        const { data } = await response.json();
         dispatch(setSearchResults(data));
-        console.log(result.data);
       } else {
-        throw new Error("Error in search");
+        throw new Error("Errorr recupero dati di ricerca");
       }
     } catch (err) {
-      console.log("error", err);
+      console.log("error:", err);
     }
   };
 };
