@@ -47,9 +47,10 @@ const AlbumsGallery = ({ searchQuery, stile }) => {
       {/* Utilizzo dello Slider con le impostazioni specificate */}
       <Slider {...settings} className={stile}>
         {/* Mappo i dati ottenuti dalla chiamata API */}
-        {searchResults.map((result) => (
-          <SingleAlbum key={result.id} artist={result.artist.name} album={result.album} />
-        ))}
+        {Array.isArray(searchResults) &&
+          searchResults.map((result) => (
+            <SingleAlbum key={result.id} artist={result.artist.name} album={result.album} />
+          ))}
       </Slider>
     </>
   );

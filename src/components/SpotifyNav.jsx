@@ -1,5 +1,6 @@
 import React from "react";
 import { CDBSidebar, CDBSidebarContent, CDBSidebarHeader, CDBSidebarMenu, CDBSidebarMenuItem } from "cdbreact";
+import { Col } from "react-bootstrap";
 // import { NavLink } from "react-router-dom";
 import { Link } from "react-router-dom";
 import Logo from "../logo.png";
@@ -23,54 +24,57 @@ const SpotifyNav = () => {
 
   // return
   return (
-    <div style={{ display: "flex", height: "100vh", overflow: "scroll initial" }}>
-      <CDBSidebar textColor="#fff" backgroundColor="#000" className="text-center">
-        <CDBSidebarHeader>
-          <a href="/" className="text-decoration-none" style={{ color: "inherit" }}>
-            <img src={Logo} alt="logo Netflix" style={{ height: "6vmin" }} />
-          </a>
-        </CDBSidebarHeader>
-        <CDBSidebarMenu>
-          <CDBSidebarMenuItem>
-            {/* <div className="sidebar-btn-wrapper p-4 py-2"> */}
-            <Link
-              to="/"
-              className="d-flex align-items-center text-white mx-2 my-2 link-underline link-underline-opacity-0"
-            >
-              <HouseDoorFill className="me-2" />
-              Home
-            </Link>
-          </CDBSidebarMenuItem>
-          <CDBSidebarMenuItem>
-            <Link
-              to="/"
-              className="d-flex align-items-center text-white mx-2 my-2 link-underline link-underline-opacity-0"
-            >
-              <BookFill className="me-2" />
-              Your Library
-            </Link>
-          </CDBSidebarMenuItem>
-          <CDBSidebarMenuItem>
-            <Form onSubmit={handleSubmit} className="input-group mt-3">
-              <Form.Control
-                type="text"
-                id="searchField"
-                placeholder="Search"
-                aria-label="Search"
-                aria-describedby="basic-addon2"
-                value={query}
-                onChange={(e) => setQuery(e.target.value)}
-              />
+    <>
+      <Col className="sidebar d-flex flex-column h-100">
+        <CDBSidebar textColor="#fff" backgroundColor="#000" className="text-center">
+          <CDBSidebarHeader>
+            <a href="/" className="text-decoration-none" style={{ color: "inherit" }}>
+              <img src={Logo} alt="logo Netflix" style={{ height: "6vmin" }} />
+            </a>
+          </CDBSidebarHeader>
+          <CDBSidebarMenu>
+            <CDBSidebarMenuItem>
+              {/* <div className="sidebar-btn-wrapper p-4 py-2"> */}
+              <Link
+                to="/"
+                className="d-flex align-items-center text-white mx-2 my-2 link-underline link-underline-opacity-0"
+              >
+                <HouseDoorFill className="me-2" />
+                Home
+              </Link>
+            </CDBSidebarMenuItem>
+            <CDBSidebarMenuItem>
+              <Link
+                to="/"
+                className="d-flex align-items-center text-white mx-2 my-2 link-underline link-underline-opacity-0"
+              >
+                <BookFill className="me-2" />
+                Your Library
+              </Link>
+            </CDBSidebarMenuItem>
+            <CDBSidebarMenuItem>
+              <Form onSubmit={handleSubmit} className="input-group mt-3">
+                <Form.Control
+                  type="text"
+                  id="searchField"
+                  placeholder="Search"
+                  aria-label="Search"
+                  aria-describedby="basic-addon2"
+                  value={query}
+                  onChange={(e) => setQuery(e.target.value)}
+                />
 
-              <Button variant="outline-secondary" className="h-100" type="submit">
-                GO
-              </Button>
-            </Form>
-          </CDBSidebarMenuItem>
-          {/* </div> */}
-        </CDBSidebarMenu>
-      </CDBSidebar>
-    </div>
+                <Button variant="outline-secondary" className="h-100" type="submit">
+                  GO
+                </Button>
+              </Form>
+            </CDBSidebarMenuItem>
+            {/* </div> */}
+          </CDBSidebarMenu>
+        </CDBSidebar>
+        {/* </div> */}
+      </Col>
+    </>
   );
 };
 

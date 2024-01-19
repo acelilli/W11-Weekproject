@@ -12,7 +12,7 @@ import AlbumsGallery from "./AlbumsGallery";
 
 const Homepage = () => {
   return (
-    <Container fluid className="px-4">
+    <Container fluid>
       <Row>
         <Col sm={12}>
           <h2>Kpop</h2>

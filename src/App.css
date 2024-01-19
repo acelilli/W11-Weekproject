@@ -3,6 +3,10 @@ body {
   color: white;
 }
 
+.sidebar {
+  width: fit-content;
+  position: fixed;
+}
 a {
   color: gray;
   text-decoration: none;
