@@ -1,5 +1,5 @@
 import "./App.css";
-import "./globalstyle.css";
+import "./globalstyle.css"; // rip
 import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Container, Row, Col } from "react-bootstrap";
