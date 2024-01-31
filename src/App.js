@@ -32,3 +32,9 @@ function App() {
 }
 
 export default App;
+
+// mi sovrascrive gli album in home, non sono riuscita a risolvere questo problema, mettendomi un artista o un'altro (invece di uno E un altro).
+// No ricerca funzionante (non ho fatto la pagina di search)
+// No gestione dei like nè canzone
+// stile globale sparito per qualche motivo sconosciuto
+// togliendo  il container la pagina si allarga, per ora l'ho mantenuto.
